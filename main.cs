@@ -1,4 +1,4 @@
-﻿// Rocket engine simulator test program for CS122 By Jacob Tang
+﻿// Rocket engine simulator test program for  By Jacob Tang
 
 using System;
 using System.Collections.Generic;
@@ -22,7 +22,6 @@ class engine_sim
 
         Console.WriteLine("LOX Density : " + lox_1.getDensity());
         Console.WriteLine("CH4 Density : " + ch4_1.getDensity());
-
         Console.ReadLine();
 
     }
@@ -110,9 +109,7 @@ namespace Fluids
 
             return interpolateDensity.mathInterpolate();
         }
-
      }
-
 }
 
 // RNG for combustion variations.
@@ -123,21 +120,17 @@ class rngGenerator
     {
         Random rnd = new Random();
         int num = rnd.Next();
-
     }
 
     public double getRngFuelFlowVariation()
     {
-
         return 0;
     }
 
     public double getRngCombustionVaiations()
     {
-
         return 0;
     }
-
 }
 
 
@@ -179,15 +172,10 @@ class Interpolator
 
                 Col2Val1 = arry[i, 1];
                 Col2Val2 = arry[i + 1, 1];
-
                 break;
             }
-
             i += 1;
-
         }
-
-
         //Interpolate by using the target temperature and the 2 set points . Using the gradient equation (m=y2-y1/x2-x1)
         gradient = (Col2Val2 - Col2Val1) / (Col1Val2 - Col1Val1);
 
@@ -230,14 +218,12 @@ class engine
     }
     public double getGasVelocity()
     {
-
         return 0;
     }
 
     public double getMach()
     {
         // Mach = v/(kRT)^0.5
-
         mach = getGasVelocity() / Math.Pow(kGasConstant * rGasConstant * combustionTemp, 0.5);
 
         return mach;
@@ -245,16 +231,11 @@ class engine
 
     public double expensionRation()
     {
-
-
         return 0;
     }
 
     public double getCStar()
     {
-
-
-
         return 0;
     }
 }
